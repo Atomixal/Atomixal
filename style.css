@@ -51,3 +51,11 @@ ul > li {
     margin: 1.4em 0;
     box-shadow: #d12fff 0px 2px 12px 0px;
 }
+
+ul > li > a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    gap: 0.5em;
+}
