@@ -1,3 +1,8 @@
+main {
+    position: relative;
+    z-index: 10; /*Any layer above -1 so It works with Vanta */
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@ body, html {
 }
 
 body {
-    background: url(Images/background.bmp) repeat center center fixed;
+    background: url(.Images/background.bmp) repeat center center fixed;
     background-size: cover;
 }
 
@@ -55,6 +60,7 @@ ul > li {
     padding: 1em;
     margin: 1.4em 0;
     box-shadow: #d12fff 0px 2px 12px 0px;
+    transition-duration: 0.4s;
 }
 
 ul > li > a {
@@ -65,14 +71,19 @@ ul > li > a {
     gap: 0.5em;
 }
 
+ul > li:hover {
+    box-shadow: #a725cc 0px 4px 24px 0px;
+    background-color: #f9fcff;
+}
+
 a {
     color: black;
     text-decoration: none;
 }
 
 #vanta {
-    z-index: 0;
-    position: absolute;
+    z-index: -1; /*Sends it behind everything */
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
